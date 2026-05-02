@@ -1,14 +1,14 @@
 body {
 	font-family: Arial, sans-serif;
 	margin: 0;
-	color: #0c2a50;
+	color: #020c45;
 	background-color:#f7eee8; /* Default background */
 }
 
 /* --- Header --- */
 
 .logo img{
-	max-width: 200px;
+	max-width: 150px !important;
 }
 
 a {
@@ -19,7 +19,7 @@ a {
 
 header nav ul {
     display: flex;
-    gap: 30px; 
+    gap: 50px; 
 	list-style: none;
 
 }
@@ -27,9 +27,10 @@ header nav ul {
 .nav-link {
     position: relative;
     padding-bottom: 5px;
-    font-size: 15px;
+    font-size: 18px;
     letter-spacing: 1px;
     transition: color 0.3s ease;
+	letter-spacing: 4px;
 }
 
 .logo-link{
@@ -63,10 +64,11 @@ header nav ul {
 }
 
 .section-title {
-	font-size: 24px;
-	font-weight: bold;
-	color: #0c2a50; 
+	font-size: 50px;
+	color: #020c45;
 	margin-bottom: 20px;
+	font-family: 'Bebas Neue', sans-serif;
+	letter-spacing: 2px;
 }
 
 .section-text {
@@ -76,14 +78,14 @@ header nav ul {
 
 
 header {
-	background-color: #0c2a50; 
+	background-color: #020c45;
 	padding: 20px 0;
-	color:#f7eee8;
+	color: #f7eee8;
 }
 
 header .container {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -94,7 +96,83 @@ header .logo {
 
 header nav ul {
 	display: flex;
-	gap: 20px;
+	gap: 30px;
+}
+
+header {
+    background-color: #020c45;
+    padding: 20px 0;
+    color: #f7eee8;
+}
+
+header .container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 80px;
+    padding: 0 10px;
+}
+
+header .logo {
+    grid-column: 1;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+header nav {
+    grid-column: 2;
+    justify-self: center; /* Centers the nav within the center column */
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.logo img {
+    max-width: 150px !important;
+}
+
+a {
+    text-decoration: none;
+    color: #ba8d4f;
+    font-size: 20px;
+}
+
+.nav-link {
+    position: relative;
+    padding-bottom: 5px;
+    font-size: 18px;
+    letter-spacing: 4px;
+    transition: color 0.3s ease;
+}
+
+.logo-link {
+    cursor: pointer;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #bfa071; 
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #f7eee8; 
 }
 
 /* --- hero Section --- */
@@ -124,7 +202,22 @@ header nav ul {
 	z-index: 2; 
 	text-align: center;
 	color: #f7eee8;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-family: 'Bebas Neue', sans-serif;
+	animation: slideLeft 1.5s ease-out forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100%); /* Começa fora da tela à esquerda */
+    opacity: 0;
   }
+  to {
+    transform: translateX(0);    /* Termina na posição original */
+    opacity: 1;
+  }
+}
   
   .impactful-phrase {
 	font-size: 50px;
@@ -136,51 +229,52 @@ header nav ul {
 .impact-section {
 	background-color: #f7eee8;
 	padding: 50px 0;
-	margin-left: 100px;
 }
 
 .impact-section .grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 80px;
+	grid-template-columns: 1.4fr 1fr;
+	gap: 200px;
 	align-items: center;
+	
 }
 
 .foto-box {
-	padding: 30px;
 	text-align: center;
 	border-radius: 10px;
 }
 
-.foto img{
-	max-width: 400px;
-	border-radius: 100%;
+.foto img {
+    width: 100%  !important;   
+    max-width: 500px !important;
+    border-radius: 100%;
+    display: block;    
 }
 
 .impact-section .buttons {
 	display: flex;
-	gap: 300px;
+	gap: 30px;
 }
 
 .btn{
-	font-size: 14px;
+	font-size: 18px;
 	text-transform: uppercase;
 	text-decoration: solid;
 	margin-top: 20px;
 	display: inline-block;
 	padding: 15px 20px;
 	background-color:#ba8d4f;
-	color:#0c2a50;
+	color:#f7eee8; 
 	font-weight: bold;
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
 	transition: background-color 0.3s;
-	width: 130px;
+	width: 250px;
 }
 
 .btn:hover {
-	background-color: #0c2a50;
+	background-color:#020c45;
 	color:#ba8d4f;
 }
 /* --- Approach Section --- */
@@ -198,9 +292,9 @@ header nav ul {
 }
 
 .card {
-	background-color:#0c2a50;
-	color: #f7eee8;
-	border-radius: 10px;
+	background-color:#f7eee8; 
+	color: #020c45;
+	border-radius: 5px;
 	overflow: hidden;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	margin-top: 70px;
@@ -232,51 +326,50 @@ header nav ul {
 
 .card-action {
 	font-weight: bold;
-	color: #0c2a50;
+	color: #020c45;
 }
 
 /* --- Marquee Section --- */
 .marquee-section {
     background-color: #f7eee8;
-    padding: 60px 0; /* Increased padding to give the "S" room to breathe */
+    padding: 60px 0; 
     overflow: hidden;
 	margin-left: 150px;
+	
 }
 
 .s-marquee-svg {
     width: 100%;
     height: auto;
+	
+	
 }
 
 .marquee-text {
-    fill: #0c2a50; 
+    fill: #020c45; 
     font-size: 35px; 
     font-weight: bold; 
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: sans-serif;
-
 }
 
-/* Optional: Make it move! */
-.marquee-text {
-    animation: move-text 20s linear infinite;
-}
 
-@keyframes move-text {
-    from { startOffset: 0%; }
-    to { startOffset: -100%; }
-}
 
 /* --- Recent Posts --- */
-.recent-posts {
-	background-color: #0c2a50; /* Dark Blue */
-	color: #f7eee8;
-	padding: 100px 0 150px 0; /* Extra bottom padding for the V space */
+.gold-section{
+	background-color: #020c45;
+	padding: 50px 0 100px 0; /* Extra bottom padding for the V space */
     
     /* The V-Shape Logic */
-	clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 100%, 0 100%);
-	    margin-bottom: -50px; /
+	clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 0 100%);
+	color:  #f7eee8;
+
+}
+
+.recent-posts{
+	margin-top: 200px;
+	border-bottom: double 4px #020c45;
 }
 
 .recent-posts .container {
@@ -285,11 +378,12 @@ header nav ul {
 
 .recentposts-title {
 
-	color:#f7eee8 ;
+	color: #f7eee8;
 	font-size: 24px;
 	font-weight: bold;
 	margin-bottom: 20px;
 	margin-top: 100px;
+	letter-spacing: 2px;
 }
 
 /* Grid Layout */
@@ -340,7 +434,7 @@ header nav ul {
 
 .cta {
     text-decoration: none;
-    color: #000;
+    color: #bfa071;
     font-weight: bold;
     font-size: 0.95rem;
     display: inline-block;
@@ -349,33 +443,35 @@ header nav ul {
 /* See More Button */
 
 .see-more{
-	font-size: 14px;
+	font-size: 18px;
 	text-transform: uppercase;
 	text-decoration: solid;
 	margin-top: 20px;
 	display: inline-block;
 	padding: 15px 20px;
 	background-color:#ba8d4f;
-	color:#f7eee8;
+	color: #f7eee8;
 	font-weight: bold;
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
 	transition: background-color 0.3s;
-	width: 130px;
+	width: 200px;
+	margin-bottom: 70px;
 }
 
 .see-more:hover {
 	background-color: #f7eee8;
-	color:#ba8d4f;
+	color:#020c45;
 }
 /* --- Review Section --- */
+
 
 .review-section {
 	background-color: #f7eee8; 
 	padding: 50px 0;
-	margin-top: 60px;
-	margin-bottom: 100px;
+	margin-top: 30px;
+	margin-bottom: 130px;
 }
 
 .review-card {
@@ -387,7 +483,7 @@ header nav ul {
 	display: flex;
 	gap: 20px;
     flex: 1; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px #020c45;
 }
 
 
@@ -406,7 +502,7 @@ header nav ul {
     background: none;
     border: none;
     font-size: 40px;
-    color: #ba8d4f;
+    color: #bfa071; 
     cursor: pointer;
     transition: transform 0.2s;
     flex-shrink: 0; /* Prevents arrows from getting squashed */
@@ -414,7 +510,7 @@ header nav ul {
 
 .arrow-btn:hover {
     transform: scale(1.2);
-    color: #8e6b3b;
+    color: #020c45;
 }
 
 .review-content {
@@ -448,7 +544,7 @@ header nav ul {
 
 .review-text {
     font-style: italic;
-    color: #444;
+    color: #020c45;
     line-height: 1.6;
     margin: 0;
 }
@@ -457,7 +553,8 @@ header nav ul {
 /* --- Footer --- */
 
 footer {
-    background-color: #001f5b;
+	margin-top: 20px;
+    background-color: #020c45;
     color: #fff;
     padding: 40px 0;
 }
@@ -476,11 +573,12 @@ footer .container {
 .social-link {
     position: relative;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 18px;
     padding-bottom: 5px; 
     display: inline-block;
     line-height: 1;
 	text-transform: uppercase;
+	letter-spacing: 4px;
 }
 
 /* The Underline (matches the header) */
@@ -502,4 +600,18 @@ footer .container {
 
 .social-link:hover::after {
     width: 100%;
+}
+
+.container img{
+	max-width: 230px;
+}
+
+.copyright{
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	margin-top: 50px;
+	border-top: double 4px #bfa071;
+
 }
