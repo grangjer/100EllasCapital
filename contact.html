@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>100 Ellas Capital</title>
+    <meta name="description" content="100 Ellas Capital website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylecss.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link">ABOUT</a></li>
+                    <li><a href="#" class="nav-link">IMPACT MAP</a></li>
+                    <li class="logo"><a href="index.html" class="logo-link"><img src="10.png"></a></li>
+                    <li><a href="#" class="nav-link">INSIGHTS</a></li>
+                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">CONTACT US</h2>
+            
+            <form id="contact-form" action="https://formspree.io/f/xzdoeyvg" method="post">
+                <div class="form-group">
+                    <label for="name">Name:<span class="required">(Required)</span></label>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:<span class="required">(Required)</span></label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                </div>
+        
+                <div class="form-group">
+                    <label for="message">Message:<span class="required">(Required)</span></label>
+                    <textarea id="message" name="message" rows="8" placeholder="Message" required></textarea>
+                </div>
+        
+                <button class="btn" type="submit">Submit</button>
+            </form>
+    
+            <div id="thanks-message" style="display: none; text-align: center; padding: 40px 0;">
+                <h2 style="font-family: inherit;">THANK YOU</h2>
+                <p>Your inquiry has been sent. we will be in touch shortly.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <img src="9.png">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/raquelbell/" class="social-link">LinkedIn</a> <a href="contact.html" class="social-link">Contact</a> </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; All Rights Reserved.</p>
+
+        </div>
+    </footer>
+
+    <script src="javascript.js"></script>
+
+    </body>
+    </html>

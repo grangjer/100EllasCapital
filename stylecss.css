@@ -523,3 +523,72 @@ footer .container {
 	border-top: double 4px #bfa071;
 
 }
+
+/*----Contact-----*/
+
+/* Container Styling */
+.contact-section {
+	padding: 80px 20px;
+	margin: 60px 40px;
+
+  }
+  
+  /* Form Groups */
+  .form-group {
+	margin-bottom: 25px;
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .form-group label {
+	font-family: 'Inter', sans-serif;
+	font-weight: 600;
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	margin-bottom: 8px;
+	color: #1a1a1a;
+  }
+  
+  /* Minimalist Inputs */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+	border: none;
+	border-bottom: 1px solid #d1d1d1; /* Thin bottom line only for a chic look */
+	padding: 12px 0;
+	font-size: 1rem;
+	background: transparent;
+	transition: border-color 0.3s ease;
+	outline: none;
+	border-radius: 0; /* Keeps it sharp */
+  }
+  
+  input:focus,
+  textarea:focus {
+	border-bottom: 1px solid #020c45; /* Darkens on focus */
+  }
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+	.form-container h2 {
+	  font-size: 2rem;
+	}
+  }
+
+  #thanks-message {
+    animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
