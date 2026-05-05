@@ -5,6 +5,11 @@ body {
 	background-color:#f7eee8; /* Default background */
 }
 
+a {
+    text-decoration: none;
+    color: inherit; /* This keeps the link from turning blue/purple */
+}
+
 /* --- Header --- */
 header {
     background-color: #020c45;
@@ -72,7 +77,7 @@ header nav ul {
 .section-title {
     font-size: 50px;
     color: #020c45;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 2px;
 }
@@ -83,7 +88,7 @@ header nav ul {
 }
 
 /* --- hero Section --- */
-.hero-banner {
+.hero-banner , .img-banner{
 	position: relative;
 	width: 100%;
 	height: 80vh; 
@@ -111,7 +116,7 @@ header nav ul {
 	color: #f7eee8;
 	text-transform: uppercase;
 	letter-spacing: 5px;
-	font-family: 'Bebas Neue', sans-serif;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	animation: slideLeft 1.5s ease-out forwards;
 }
 
@@ -141,7 +146,7 @@ header nav ul {
 .impact-section .grid {
 	display: grid;
 	grid-template-columns: 1.4fr 1fr;
-	gap: 200px;
+	gap: 100px;
 	align-items: center;
 	
 }
@@ -591,4 +596,243 @@ footer .container {
         opacity: 1; 
         transform: translateY(0); 
     }
+}
+
+
+  /* about page */
+  /* The container */
+.img-banner {
+    position: relative;
+    display: inline-block; /* Keeps the box the same size as the image */
+    background-color: #f7eee8; /* Makes the image look dark when opacity is low */
+    width: 100%;
+}
+
+/* The image */
+.img-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.5; /* Your opacity */
+}
+
+/* The overlay container */
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* This centers the content perfectly */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    pointer-events: none; /* Allows you to click the image if needed */
+}
+
+/* The actual text */
+.overlay-text {
+    color: #020c45;
+    font-size: 3rem;
+    margin: 0;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8); /* Makes it pop */
+	position: relative; 
+	z-index: 2; 
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	animation: slideLeft 1.5s ease-out forwards;
+}
+.about-section{
+	background-color: #f5e9e2;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.text-about{
+	border: solid 2px #ba8d4f;
+	padding: 20px;
+	font-size: 30px;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	width: 70%;
+	text-align: center;
+	margin: 70px auto;
+}
+
+/* Container Setup */
+.content {
+	max-width: 900px;
+	margin: 100px auto;
+	padding: 0 20px;
+	font-family: 'Inter', -apple-system, sans-serif; /* Clean sans-serif */
+	line-height: 1.6;
+	color: #020c45;;
+  }
+  
+  /* Section 1: The "Multiplier" Hero */
+  .content-title:first-of-type {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: clamp(3rem, 8vw, 5rem);
+	margin-bottom: 1rem;
+	letter-spacing: -2px;
+	color: #020c45;;
+  }
+  
+  /* Special styling for the "Multiplier" sentence */
+  .content-text:first-of-type {
+	font-size: 1.5rem;
+	font-weight: 300;
+	max-width: 600px;
+	margin-bottom: 4rem;
+	border-left: 4px solid #ba8d4f; /* Accents the 'power' aspect */
+	padding-left: 24px;
+	transition: transform 0.4s ease;
+  }
+  
+  .content-text:first-of-type:hover {
+	transform: translateX(10px);
+	color: #ba8d4f;
+  }
+  
+  /* Section 2: The Definition (Grid Layout) */
+  .content-text:nth-of-type(2) {
+	display: grid;
+	grid-template-columns: 1fr 2.5fr;
+	width: 70%;
+	align-items: start;
+	margin-bottom: 200px;
+	margin-left: 150px;
+
+  }
+  
+  .content-text:nth-of-type(2) strong {
+	font-size: 2.5rem;
+	font-family: "Playfair Display", serif;
+	display: block;
+	line-height: 1;
+  }
+  
+  .content-title:last-of-type {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: clamp(1.5rem, 6vw, 3.5rem); /* Scalable huge text */
+    line-height: 1.1;
+    margin: 30px 0px;
+    color: #020c45;
+    letter-spacing: -1.5px;
+    border-top: none; /* Removing the old divider for more "flow" */
+    padding-top: 0;
+}
+
+/* The Answer: High-Impact "Focus" Box */
+.content-text:last-of-type {
+    position: relative;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 400;
+    line-height: 1.5;
+    color: #020c45;
+    max-width: 100%;
+    
+    /* Creating a creative 'Offset' look */
+    padding: 60px;
+    background-color:#f5e9e2;  /* Very soft parchment/cream */
+    border-left: 8px solid #020c45;
+    
+    /* Subtle texture effect */
+    background-image: radial-gradient(#d1d1d1 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+}
+
+/* Optional: Add a "floating" decorative element */
+.content-text:last-of-type::before {
+    position: absolute;
+    top: -15px;
+    left: 40px;
+    background: #ba8d4f; /* Matches your accent color */
+    color: #020c45;
+    padding: 4px 12px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+/* Hover effect to make it feel "Intentional" */
+.content-text:last-of-type:hover {
+    background-color: #f5e9e2;;
+    box-shadow: 20px 20px 0px #ba8d4f; /* Soft accent shadow */
+    transform: translateY(-5px);
+    transition: all 0.4s ease;
+}
+
+/* --- THIRD SECTION: GET IN TOUCH --- */
+
+.footer-section {
+	background-color: #020c45;
+    padding: 100px 0 0 0; 
+        clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 0 100%);
+        width: 100%;
+    position: relative;
+	
+
+}
+
+.get-in-touch{
+	margin-bottom: 50px;
+}
+
+.title {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+	padding: 40px;
+	margin-left: 100px;
+    margin-bottom: 3rem;
+	color:  #f7eee8;
+
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between the two rows */
+	margin-bottom: 50px;
+}
+
+.contact-row {
+    display: flex;
+    align-items:start;
+    gap: 15px; /* Space between icon and text */
+    padding: 12px 24px;
+	color: #f7eee8;
+	margin-left: 100px;
+	
+}
+
+/* Subtle hover effect even if not clickable */
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+    color: #f7eee8; /* Accent color for the icons */
+}
+
+.contact-text {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+	color: #f7eee8;
+	text-decoration: none;
+}
+
+.contact-text:hover{
+	color: #ba8d4f;
+}
+
+.footer-section{
+	background-color: #020c45;
+
 }
