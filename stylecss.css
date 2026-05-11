@@ -73,6 +73,60 @@ header nav ul {
     width: 100%;
 }
 
+/* Hamburger button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 2.5px;
+    background: #ba8d4f;
+    border-radius: 2px;
+}
+
+/* Mobile header row (logo + hamburger) */
+.nav-header-row {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+/* Mobile dropdown menu */
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease;
+}
+
+.mobile-menu.open { max-height: 400px; }
+.mobile-menu a {
+    display: block;
+    padding: 16px 0;
+    color: #ba8d4f;
+    font-size: 15px;
+    letter-spacing: 4px;
+    border-bottom: 1px solid rgba(186,141,79,0.15);
+    transition: color 0.2s;
+}
+.mobile-menu a:hover { color: #f7eee8; }
+
+@media (max-width: 700px) {
+    header nav ul { display: none; }
+    .nav-header-row { display: flex; }
+    .hamburger { display: flex; }
+    .mobile-menu.open { max-height: 400px; }
+}
+
 
 /* --- Section Text --- */
 .section-title {
@@ -844,3 +898,355 @@ footer .container {
 	background-color: #020c45;
 
 }
+
+/*---------- IMPACT ---------- */
+
+
+.inights-section{
+    margin-top: 50px;
+    padding: 50px;
+}
+
+.inights-section .container {
+    position: relative;
+}
+
+/* Grid Layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Card Styling */
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: #d1e0d0; /* Soft sage placeholder */
+    background-image: linear-gradient(135deg, #d1e0d0 25%, #c5d6c4 100%);
+}
+
+.card-content {
+    padding: 30px;
+    color: #333;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.card-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.cta {
+    text-decoration: none;
+    color: #bfa071;
+    font-weight: bold;
+    font-size: 0.95rem;
+    display: inline-block;
+}
+
+/*----MOBILE RESPONSIVE-----------*/
+
+@media (max-width: 700px) {
+
+    /* --- Approach Section --- */
+    .approach-section {
+        margin: 20px auto;
+        padding-bottom: 0;
+    }
+  
+    .headline {
+      font-size: 2.2rem;
+    }
+  
+    .approach-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin: 40px 20px;
+    }
+  
+    /* --- Marquee Section --- */
+    .marquee-section {
+        margin-left: 20px;
+        padding: 20px 0;
+    }
+  
+    .learn-more {
+      margin-left: 0 !important;
+      display: block;
+      text-align: center;
+    }
+  
+    /* --- Hero --- */
+    .impactful-phrase {
+      font-size: 30px;
+      letter-spacing: 2px;
+    }
+  
+    .hero-overlay {
+      font-size: 2rem;
+      padding: 0 20px;
+    }
+  
+    /* --- About/Impact Section --- */
+    .impact-section .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      gap: 20px;
+    }
+  
+    .grid {
+      margin-left: 0;
+    }
+  
+    .foto img {
+      top: 0;
+      max-width: 220px !important;
+      margin: 0 auto;
+      
+    }
+  
+    .foto-box {
+      display: flex;
+      justify-content: center;
+        order: -1; 
+      
+    }
+  
+    .impact-section .buttons {
+        flex-direction: row;
+        gap: 15px;
+    }
+  
+    /* --- Gold Section --- */
+    .gold-section {
+      clip-path: polygon(0 5%, 50% 0, 100% 5%, 100% 100%, 0 100%);
+      padding: 30px 0 60px 0;
+    }
+  
+    /* --- Footer --- */
+    footer .container {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  
+    .container img {
+      max-width: 160px;
+    }
+  
+    .disclaimer {
+      padding: 20px;
+      font-size: 14px;
+    }
+  
+    /* --- Section Title --- */
+    .section-title {
+      font-size: 32px;
+      text-align: center;
+    }
+  
+    .section-text {
+      font-size: 16px;
+    }
+    .btn {
+        width: 100%;
+        text-align: center;
+      }
+      
+}
+
+@media (max-width: 700px) {
+
+  /* --- Image on top, text on bottom --- */
+  .impact-section .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+  }
+
+  .foto-box {
+    order: -1; /* Moves image to top */
+    display: flex;
+    justify-content: center;
+  }
+
+  .foto img {
+    top: 0;
+    max-width: 220px !important;
+  }
+
+  /* --- Buttons side by side --- */
+  .impact-section .buttons {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* --- Fix gap between approach and marquee --- */
+  .approach-section {
+    margin: 20px auto;
+    padding-bottom: 0;
+  }
+
+  .marquee-section {
+    margin-left: 0;
+    padding: 20px 0;
+  }
+
+}
+
+  /* --- ABOUT PAGE MEDIA QUERY--- */
+
+
+@media (max-width: 700px) {
+
+    /* --- Image Banner --- */
+    .overlay-text {
+      font-size: 36px;
+      letter-spacing: 2px;
+      padding: 10px;
+    }
+  
+    /* --- About Section --- */
+    .about-section {
+      padding: 40px 20px;
+    }
+  
+    .intro-line {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+  
+    .main-line {
+      font-size: 22px;
+    }
+  
+    .closing-line {
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+  
+    /* --- Why Section --- */
+    .why-section {
+      padding: 40px 20px;
+    }
+  
+    .headline {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+  
+    .quote-box {
+      padding: 30px 20px 30px 40px;
+    }
+  
+    .quote-box p {
+      font-size: 18px;
+      margin-left: 20px;
+    }
+  
+    .quote-box::before {
+      left: 20px;
+      top: 30px;
+    }
+  
+    /* --- About Cards --- */
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .about-card {
+      padding: 30px 20px;
+    }
+  
+    .number {
+      font-size: 50px;
+    }
+  
+    .about-card h3 {
+      font-size: 20px;
+    }
+  
+    .about-card p {
+      font-size: 16px;
+    }
+  
+    /* --- Get in Touch --- */
+    .footer-section {
+      clip-path: polygon(0 5%, 50% 0, 100% 5%, 100% 100%, 0 100%);
+      padding: 60px 0 0 0;
+    }
+  
+    .title {
+      font-size: 30px;
+      margin-left: 20px;
+    }
+  
+    .contact-row {
+      margin-left: 20px;
+      padding: 10px 16px;
+    }
+  
+    .contact-text {
+      font-size: 0.95rem;
+    }
+
+    .img-banner {
+      position: relative;
+      height: 40vh;
+      overflow: hidden;
+    }
+  
+    .img-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .overlay-text {
+      font-size: 32px;
+      letter-spacing: 2px;
+      padding: 10px 20px;
+    }
+  
+  }

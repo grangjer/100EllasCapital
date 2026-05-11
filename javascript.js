@@ -1,24 +1,41 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Contact form
     const form = document.getElementById('contact-form');
     const thanksMessage = document.getElementById('thanks-message');
-
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault(); // Prevents the page from redirecting to Formspree's site
-
+  
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+  
         const formData = new FormData(form);
         
-        // Send the data using Fetch API
         const response = await fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
         });
-
+  
         if (response.ok) {
-            form.style.display = 'none'; // Hide the form
-            thanksMessage.style.display = 'block'; // Show the success message
+          form.style.display = 'none';
+          thanksMessage.style.display = 'block';
         } else {
-            alert("Oops! There was a problem submitting your form. Please try again.");
+          alert("Oops! There was a problem submitting your form. Please try again.");
         }
-    });
+      });
+    }
+  
+    // Hamburger menu
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobile-menu');
+  
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+      });
+    }
+  
+  });
