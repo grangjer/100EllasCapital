@@ -1,5 +1,5 @@
 body {
-	font-family: Arial, sans-serif;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	margin: 0;
 	color: #020c45;
 	background-color:#f7eee8; /* Default background */
@@ -77,7 +77,6 @@ header nav ul {
 .section-title {
     font-size: 50px;
     color: #020c45;
-    margin-bottom: 10px;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 2px;
 }
@@ -85,6 +84,7 @@ header nav ul {
 .section-text {
     line-height: 1.6;
     margin-bottom: 20px;
+    font-size: 18px;
 }
 
 /* --- hero Section --- */
@@ -113,11 +113,16 @@ header nav ul {
 	position: relative; 
 	z-index: 2; 
 	text-align: center;
-	color: #f7eee8;
-	text-transform: uppercase;
+    color: #f7eee8;
+    font-size: 3rem;
+    margin: 0;
 	letter-spacing: 5px;
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-family: "Snell Roundhand", cursive;
 	animation: slideLeft 1.5s ease-out forwards;
+    animation: slideLeft 1.5s ease-out forwards;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    
+
 }
 
 @keyframes slideLeft {
@@ -134,33 +139,35 @@ header nav ul {
   .impactful-phrase {
 	font-size: 50px;
 	font-weight: bold;
-	text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
   }
 
 /* --- Impact Section --- */
 .impact-section {
 	background-color: #f7eee8;
-	padding: 50px 0;
+	padding: 70px 0;
 }
 
 .impact-section .grid {
 	display: grid;
 	grid-template-columns: 1.4fr 1fr;
 	gap: 100px;
-	align-items: center;
+        align-items: start; /* Changed from center to start */
 	
 }
 
-.foto-box {
-	text-align: center;
-	border-radius: 10px;
+.grid{
+    margin-left: 100px;
 }
+
 
 .foto img {
     width: 100%  !important;   
-    max-width: 500px !important;
+    max-width: 400px !important;
     border-radius: 100%;
-    display: block;    
+    display: block;
+    position: relative;
+    top: -50px; /* Moves the image 50px up from its natural position */
+
 }
 
 .impact-section .buttons {
@@ -169,10 +176,10 @@ header nav ul {
 }
 
 .btn{
-	font-size: 18px;
+	font-size: 16px;
 	text-transform: uppercase;
 	text-decoration: solid;
-	margin-top: 20px;
+	margin-top: 40px;
 	display: inline-block;
 	padding: 15px 20px;
 	background-color:#ba8d4f;
@@ -182,7 +189,9 @@ header nav ul {
 	border-radius: 10px;
 	cursor: pointer;
 	transition: background-color 0.3s;
-	width: 250px;
+	width: 150px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
 .btn:hover {
@@ -190,56 +199,103 @@ header nav ul {
 	color:#ba8d4f;
 }
 /* --- Approach Section --- */
+/* --- New Approach Layout --- */
+
 .approach-section {
-	padding: 50px;
-	margin-bottom: 40px;
+    padding: 10px 20px;
+    background-color: #f7eee8; /* Clean white background to make circles pop */
 }
 
 
-
-.approach-section .grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 30px;
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 150px auto 0 auto;
 }
 
-.card {
-	background-color:#f7eee8; 
-	color: #020c45;
-	border-radius: 5px;
-	overflow: hidden;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	margin-top: 70px;
+.approach-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
 }
 
-.card-image {
-	height: 150px;
-	background-size: cover;
-	background-position: center;
+/* The Animated Round Icon */
+.circle-icon {
+    width: 120px;
+    height: 120px;
+    background-color: #ba8d4f; /* Your soft peach/cream color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #020c45;
+    margin-bottom: 30px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(2, 12, 69, 0.05);
 }
 
-.card:nth-child(1) .card-image { background-image: url('placeholder.jpg'); } /* Placeholder */
-.card:nth-child(2) .card-image { background-image: url('placeholder.jpg'); } /* Placeholder */
-.card:nth-child(3) .card-image { background-image: url('placeholder.jpg'); } /* Placeholder */
-
-.card-content {
-	padding: 20px;
+.circle-icon svg {
+    width: 40px;
+    height: 40px;
 }
 
-.card-title {
-	font-weight: bold;
-	margin-bottom: 10px;
+.stat-highlight {
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
-.card-text {
-	font-size: 14px;
-	margin-bottom: 15px;
+/* Hover Animations */
+.approach-item:hover .circle-icon {
+    transform: scale(1.1);
+    background-color: #020c45;
+    color: #f7eee8;
+    box-shadow: 0 15px 30px rgba(2, 12, 69, 0.15);
 }
 
-.card-action {
-	font-weight: bold;
-	color: #020c45;
+.approach-item:hover {
+    transform: translateY(-10px);
 }
+
+/* Continuous Pulse Animation */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(247, 238, 232, 0.7); }
+    70% { box-shadow: 0 0 0 20px rgba(247, 238, 232, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(247, 238, 232, 0); }
+}
+
+.pulse-1 { animation: pulse 3s infinite; }
+.pulse-2 { animation: pulse 3s infinite 1s; }
+.pulse-3 { animation: pulse 3s infinite 2s; }
+
+/* Content Styling */
+.approach-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #020c45;
+}
+
+.approach-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 280px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 850px) {
+    .approach-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+
 
 /* --- Marquee Section --- */
 .marquee-section {
@@ -247,6 +303,7 @@ header nav ul {
     padding: 60px 0; 
     overflow: hidden;
 	margin-left: 150px;
+    margin-top: 60px;
 	
 }
 
@@ -263,7 +320,7 @@ header nav ul {
     font-weight: bold; 
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-family: sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
@@ -355,7 +412,7 @@ header nav ul {
 /* See More Button */
 
 .see-more{
-	font-size: 18px;
+	font-size: 16px;
 	text-transform: uppercase;
 	text-decoration: solid;
 	margin-top: 20px;
@@ -368,8 +425,9 @@ header nav ul {
 	border-radius: 10px;
 	cursor: pointer;
 	transition: background-color 0.3s;
-	width: 200px;
+	width: 150px;
 	margin-bottom: 70px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .see-more:hover {
@@ -633,141 +691,213 @@ footer .container {
 }
 
 /* The actual text */
+
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
 .overlay-text {
     color: #020c45;
-    font-size: 3rem;
+    font-size: 62px;
     margin: 0;
     text-align: center;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.8); /* Makes it pop */
 	position: relative; 
 	z-index: 2; 
 	text-align: center;
-	text-transform: uppercase;
 	letter-spacing: 5px;
-	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-family: 'Cardo', serif;
+    font-style: italic;
 	animation: slideLeft 1.5s ease-out forwards;
+    background-color: #f7eee8;
+    padding: 15px;
+    margin-top: 12px;
 }
-.about-section{
-	background-color: #f5e9e2;
-	justify-content: center;
-	align-items: center;
-	display: flex;
-}
-
-.text-about{
-	border: solid 2px #ba8d4f;
-	padding: 20px;
-	font-size: 30px;
-	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	width: 70%;
-	text-align: center;
-	margin: 70px auto;
-}
-
-/* Container Setup */
-.content {
-	max-width: 900px;
-	margin: 100px auto;
-	padding: 0 20px;
-	font-family: 'Inter', -apple-system, sans-serif; /* Clean sans-serif */
-	line-height: 1.6;
-	color: #020c45;;
+.about-section {
+    background-color: #f5e9e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px;
   }
   
-  /* Section 1: The "Multiplier" Hero */
-  .content-title:first-of-type {
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	font-size: clamp(3rem, 8vw, 5rem);
-	margin-bottom: 1rem;
-	letter-spacing: -2px;
-	color: #020c45;;
-  }
-  
-  /* Special styling for the "Multiplier" sentence */
-  .content-text:first-of-type {
-	font-size: 1.5rem;
-	font-weight: 300;
-	max-width: 600px;
-	margin-bottom: 4rem;
-	border-left: 4px solid #ba8d4f; /* Accents the 'power' aspect */
-	padding-left: 24px;
-	transition: transform 0.4s ease;
-  }
-  
-  .content-text:first-of-type:hover {
-	transform: translateX(10px);
-	color: #ba8d4f;
-  }
-  
-  /* Section 2: The Definition (Grid Layout) */
-  .content-text:nth-of-type(2) {
-	display: grid;
-	grid-template-columns: 1fr 2.5fr;
-	width: 70%;
-	align-items: start;
-	margin-bottom: 200px;
-	margin-left: 150px;
-
-  }
-  
-  .content-text:nth-of-type(2) strong {
-	font-size: 2.5rem;
-	font-family: "Playfair Display", serif;
-	display: block;
-	line-height: 1;
-  }
-  
-  .content-title:last-of-type {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: clamp(1.5rem, 6vw, 3.5rem); /* Scalable huge text */
-    line-height: 1.1;
-    margin: 30px 0px;
+  .text-about {
+    max-width: 900px;
+    text-align: center;
     color: #020c45;
-    letter-spacing: -1.5px;
-    border-top: none; /* Removing the old divider for more "flow" */
-    padding-top: 0;
-}
-
-/* The Answer: High-Impact "Focus" Box */
-.content-text:last-of-type {
-    position: relative;
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    font-weight: 400;
-    line-height: 1.5;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  
+  /* Top italic sentence */
+  .intro-line {
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 40px;
     color: #020c45;
-    max-width: 100%;
-    
-    /* Creating a creative 'Offset' look */
+    font-family: 'Cardo', serif;
+  }
+  
+  /* Main bold statements */
+  .main-line {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 10px 0;
+  }
+  
+  /* Divider line */
+  .divider {
+    width: 60px;
+    height: 2px;
+    background-color: #020c45;
+    margin: 30px auto;
+  }
+  
+  /* Bottom small caps line */
+  .closing-line {
+    margin-top: 50px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: #8c7a5b;
+  }
+  
+  .closing-line span {
+    color: #ba8d4f;
+  }
+
+  .why-section {
+    background-color: #f5efe9;
+    padding: 70px 20px;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #1a2340;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* Top label */
+  .eyebrow {
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: #b59b6a;
+    margin-bottom: 20px;
+  }
+  
+  /* Main headline */
+  .headline {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 60px;
+  }
+  
+  .headline span {
+    font-style: italic;
+    color: #b59b6a;
+  }
+  
+  /* Quote box */
+  .quote-box {
+    border: 1px solid #b59b6a;
     padding: 60px;
-    background-color:#f5e9e2;  /* Very soft parchment/cream */
-    border-left: 8px solid #020c45;
-    
-    /* Subtle texture effect */
-    background-image: radial-gradient(#d1d1d1 0.5px, transparent 0.5px);
-    background-size: 20px 20px;
-}
-
-/* Optional: Add a "floating" decorative element */
-.content-text:last-of-type::before {
+    margin-bottom: 0;
+    position: relative;
+  }
+  
+  .quote-box p {
+    font-style: italic;
+    font-size: 26px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: 40px;
+  }
+  
+  /* Vertical accent line */
+  .quote-box::before {
+    content: "";
     position: absolute;
-    top: -15px;
     left: 40px;
-    background: #ba8d4f; /* Matches your accent color */
-    color: #020c45;
-    padding: 4px 12px;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 100;
-}
+    top: 60px;
+    width: 2px;
+    height: 60px;
+    background-color: #b59b6a;
+  }
+  
+  /* Grid section */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: none; /* keeps it aligned with quote box above */
+  }
+  
+  .about-card {
+    padding: 60px;
+    border: 1px solid #b59b6a;
+  }
+  
 
-/* Hover effect to make it feel "Intentional" */
-.content-text:last-of-type:hover {
-    background-color: #f5e9e2;;
-    box-shadow: 20px 20px 0px #ba8d4f; /* Soft accent shadow */
-    transform: translateY(-5px);
-    transition: all 0.4s ease;
-}
+  
+  /* Large faded numbers */
+  .number {
+    font-size: 80px;
+    color: #b8aa97;
+    margin-bottom: 20px;
+        transition: color 0.35s ease, transform 0.35s ease;
+      }
+
+  
+  /* Card titles */
+  .about-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Body text */
+  .about-card p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #5a5f6a;
+  }
+
+  .about-card {
+    transition: transform 0.35s ease, background-color 0.35s ease;
+  }
+  
+  .about-card:hover {
+    transform: translateY(-6px);
+    background-color: #f8f3ee; /* slightly lighter than background */
+  }
+  
+  .about-card:hover .number {
+    color: #b59b6a;
+    transform: translateY(-4px);
+  }
+
+  .about-card h3 {
+    transition: color 0.3s ease;
+  }
+  
+  .about-card:hover h3 {
+    color: #020c45;
+  }
+  .quote-box {
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+  }
+  
+  .quote-box:hover {
+    background-color: #f8f3ee;
+    border-color: #d6c7b5;
+  }
+
+  .quote-box::before {
+    transition: height 0.4s ease, background-color 0.4s ease;
+  }
+  
+  .quote-box:hover::before {
+    height: 80px;
+    background-color: #b59b6a;
+  }
 
 /* --- THIRD SECTION: GET IN TOUCH --- */
 
@@ -783,16 +913,15 @@ footer .container {
 
 .get-in-touch{
 	margin-bottom: 50px;
+
 }
 
 .title {
-    font-family: "Playfair Display", serif;
-    font-size: 32px;
-	padding: 40px;
-	margin-left: 100px;
-    margin-bottom: 3rem;
-	color:  #f7eee8;
-
+    font-size: 42px;
+    color: #f7eee8;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    margin-left: 100px;
 }
 
 .contact-container {
