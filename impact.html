@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>100 Ellas Capital</title>
+    <meta name="description" content="100 Ellas Capital website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylecss.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+      
+          <!-- Desktop nav (unchanged) -->
+          <nav>
+            <ul>
+              <li><a href="about.html" class="nav-link">ABOUT</a></li>
+              <li><a href="impact.html" class="nav-link">IMPACT MAP</a></li>
+              <li class="logo"><a href="index.html"><img src="10.png"></a></li>
+              <li><a href="insights.html" class="nav-link">INSIGHTS</a></li>
+              <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+            </ul>
+          </nav>
+      
+          <!-- Mobile: logo + hamburger -->
+          <div class="nav-header-row">
+            <a href="index.html"><img src="10.png" style="max-width:110px;display:block;"></a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+      
+          <!-- Mobile dropdown -->
+          <div class="mobile-menu" id="mobile-menu">
+            <a href="about.html">ABOUT</a>
+            <a href="impact.html">IMPACT MAP</a>
+            <a href="insights.html">INSIGHTS</a>
+            <a href="contact.html">CONTACT</a>
+          </div>
+      
+        </div>
+      </header>
+
+      <section class="page-hero">
+        <h1>Your Impact Investment <span>Roadmap</span></h1>
+        <p>A 5-step guide to evaluate opportunities and build an impact thesis with clarity and confidence.</p>
+      </section>
+    
+      <!-- ROADMAP -->
+      <section class="roadmap-section">
+    
+        <div class="hint-bar">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8l-1-1a2 2 0 0 0-3 3l4 4a6 6 0 0 0 6 0 6 6 0 0 0 6-6v-2a2 2 0 0 0-4 0"/>
+          </svg>
+          Click each step on the roadmap to explore key questions and insights
+        </div>
+    
+        <!-- SVG ROAD -->
+        <div class="road-wrap">
+          <svg viewBox="0 0 900 160" xmlns="http://www.w3.org/2000/svg">
+    
+            <!-- Road path -->
+            <path d="M20,100 C120,100 150,40 270,60 C390,80 400,120 510,95 C620,70 640,35 760,55 C820,65 870,80 900,80"
+                  fill="none" stroke="#ba8d4f" stroke-width="22" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+            <!-- Dashed center line -->
+            <path d="M20,100 C120,100 150,40 270,60 C390,80 400,120 510,95 C620,70 640,35 760,55 C820,65 870,80 900,80"
+                  fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="10 12" opacity="0.55"/>
+    
+            <!-- Step 1: PROBLEM -->
+            <g class="step-node" id="node-0" onclick="toggleCard(0)">
+              <circle cx="100" cy="62" r="26" fill="#020c45" stroke="#f7eee8" stroke-width="2.5"/>
+              <text x="100" y="67" text-anchor="middle" fill="#fff" font-size="20" font-weight="700" font-family="Georgia,serif">1</text>
+              <text x="100" y="120" text-anchor="middle" fill="#020c45" font-size="18" font-weight="700" font-family="Georgia,serif" letter-spacing="1.5">PROBLEM</text>
+              <text x="100" y="140" text-anchor="middle" fill="#8a7060" font-size="16" font-family="Georgia,serif">Understand the need</text>
+            </g>
+    
+            <!-- Step 2: SOLUTION -->
+            <g class="step-node" id="node-1" onclick="toggleCard(1)">
+              <circle cx="300" cy="43" r="26" fill="#020c45" stroke="#f7eee8" stroke-width="2.5"/>
+              <text x="300" y="48" text-anchor="middle" fill="#fff" font-size="20" font-weight="700" font-family="Georgia,serif">2</text>
+              <text x="300" y="102" text-anchor="middle" fill="#020c45" font-size="18" font-weight="700" font-family="Georgia,serif" letter-spacing="1">SOLUTION</text>
+              <text x="300" y="120" text-anchor="middle" fill="#8a7060" font-size="16" font-family="Georgia,serif">Assess the fit</text>
+            </g>
+    
+            <!-- Step 3: STRATEGY -->
+            <g class="step-node" id="node-2" onclick="toggleCard(2)">
+              <circle cx="480" cy="78" r="26" fill="#020c45" stroke="#f7eee8" stroke-width="2.5"/>
+              <text x="480" y="83" text-anchor="middle" fill="#fff" font-size="20" font-weight="700" font-family="Georgia,serif">3</text>
+              <text x="480" y="20" text-anchor="middle" fill="#020c45" font-size="18" font-weight="700" font-family="Georgia,serif" letter-spacing="1">STRATEGY</text>
+              <text x="480" y="38" text-anchor="middle" fill="#8a7060" font-size="16" font-family="Georgia,serif">Evaluate the plan</text>
+            </g>
+    
+            <!-- Step 4: DESIRED OUTCOME -->
+            <g class="step-node" id="node-3" onclick="toggleCard(3)">
+              <circle cx="700" cy="42" r="26" fill="#020c45" stroke="#f7eee8" stroke-width="2.5"/>
+              <text x="700" y="47" text-anchor="middle" fill="#fff" font-size="20" font-weight="700" font-family="Georgia,serif">4</text>
+              <text x="700" y="100" text-anchor="middle" fill="#020c45" font-size="18" font-weight="700" font-family="Georgia,serif" letter-spacing="1">OUTCOME</text>
+              <text x="700" y="118" text-anchor="middle" fill="#8a7060" font-size="16" font-family="Georgia,serif">Define success</text>
+            </g>
+    
+            <!-- Step 5: EVALUATE RESULTS -->
+            <g class="step-node" id="node-4" onclick="toggleCard(4)">
+              <circle cx="878" cy="62" r="26" fill="#020c45" stroke="#f7eee8" stroke-width="2.5"/>
+              <text x="878" y="67" text-anchor="middle" fill="#fff" font-size="20" font-weight="700" font-family="Georgia,serif">5</text>
+              <text x="878" y="05" text-anchor="middle" fill="#020c45" font-size="18" font-weight="700" font-family="Georgia,serif" letter-spacing="1">RESULTS</text>
+              <text x="878" y="25" text-anchor="middle" fill="#8a7060" font-size="16" font-family="Georgia,serif">Check the evidence</text>
+            </g>
+          </svg>
+        </div>
+    
+        <!-- INFO CARDS -->
+        <div class="cards-grid" id="cards-grid">
+    
+          <div class="info-card" id="card-0">
+            <div class="card-header">
+              <div class="card-num" style="background:#020c45;">1</div>
+              <span class="card-title" style="color:#020c45;">Problem</span>
+            </div>
+            <ul class="card-questions">
+              <li>What is the real problem?</li>
+              <li>Who is most affected?</li>
+              <li>Why has it persisted?</li>
+            </ul>
+            <div class="card-insight" style="background:#eef0f8;">
+              Look for evidence, not assumptions. A real problem has data behind it.
+            </div>
+          </div>
+    
+          <div class="info-card" id="card-1">
+            <div class="card-header">
+              <div class="card-num" style="background:#020c45;">2</div>
+              <span class="card-title" style="color:#020c45;">Solution</span>
+            </div>
+            <ul class="card-questions">
+              <li>Does it address the root cause?</li>
+              <li>Who tried before — and why did they fail?</li>
+              <li>Could it cause unintended harm?</li>
+            </ul>
+            <div class="card-insight" style="background:#eef0f8;">
+              Good solutions are relevant, differentiated, and get more accessible as they scale — not less.
+            </div>
+          </div>
+    
+          <div class="info-card" id="card-2">
+            <div class="card-header">
+              <div class="card-num" style="background:#020c45;">3</div>
+              <span class="card-title" style="color:#020c45;">Strategy</span>
+            </div>
+            <ul class="card-questions">
+              <li>Is go-to-market reaching those who need it most?</li>
+              <li>Does the team have domain expertise to execute?</li>
+              <li>How will it sustain itself financially?</li>
+              <li>What are the key execution risks?</li>
+            </ul>
+            <div class="card-insight" style="background:#eef0f8;">
+              A great solution aimed at the wrong market is not investable.
+            </div>
+          </div>
+    
+          <div class="info-card" id="card-3">
+            <div class="card-header">
+              <div class="card-num" style="background:#020c45;">4</div>
+              <span class="card-title" style="color:#020c45;">Desired Outcome</span>
+            </div>
+            <ul class="card-questions">
+              <li>What change will this create?</li>
+              <li>Would this happen without this company?</li>
+              <li>What if the company is acquired?</li>
+            </ul>
+            <div class="card-insight" style="background:#eef0f8;">
+              Define impact before you invest — in the beneficiary's words, not the founder's.
+            </div>
+          </div>
+    
+          <div class="info-card" id="card-4">
+            <div class="card-header">
+              <div class="card-num" style="background:#020c45;">5</div>
+              <span class="card-title" style="color:#020c45;">Evaluate Results</span>
+            </div>
+            <ul class="card-questions">
+              <li>Is impact trajectory moving in the right direction?</li>
+              <li>Has the beneficiary population drifted?</li>
+              <li>What did this teach you for the next deal?</li>
+            </ul>
+            <div class="card-insight" style="background:#eef0f8;">
+              Track what matters. Learn. Adapt. Your portfolio is an evidence base, not just a ledger.
+            </div>
+          </div>
+    
+        </div>
+    
+      </section>
+    
+
+      <footer>
+        <div class="container">
+            <img src="9.png">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/raquelbell/" class="social-link">LinkedIn</a> <a href="contact.html" class="social-link">Contact</a> </div>
+        </div>
+    
+        <div class="disclaimer">
+            <p>DISCLAIMER: The content and materials shared through 100 Ellas are provided for educational and informational purposes only and should not be considered investment, legal, tax, or financial advice. Nothing on this website constitutes a recommendation, solicitation, or offer to buy or sell any security or investment product.<br>
+
+                Investing in early-stage companies and private markets involves substantial risk, including the potential loss of capital, limited liquidity, and uncertainty of returns. Any examples, frameworks, opinions, or personal experiences shared are intended to support learning and independent thinking, not individualized investment decisions.<br>
+                
+                You should conduct your own due diligence and consult with qualified financial, legal, or tax professionals before making any investment decisions. Past performance does not guarantee future results.</p>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; All Rights Reserved.</p>
+
+        </div>
+    </footer>
+    
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+          <p class="cookie-text">
+            We use cookies to improve your experience on our website. By continuing to browse, you agree to our use of cookies.
+          </p>
+          <div class="cookie-buttons">
+            <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+            <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+          </div>
+        </div>
+      </div>
+
+    <script src="javascript.js"></script>
+    
+        </body>
+        </html>
+
+            
