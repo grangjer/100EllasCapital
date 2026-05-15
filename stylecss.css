@@ -1023,10 +1023,9 @@ select:hover {
   
   .image-placeholder {
     width: 100%;
-    aspect-ratio: 4 / 3; /* Consistent proportions instead of fixed height */
+    aspect-ratio: 4.5 / 3; /* Consistent proportions instead of fixed height */
     border-radius: 10px;
     background-color: #d1e0d0;
-    background-image: linear-gradient(135deg, #d1e0d0 25%, #c5d6c4 100%);
     overflow: hidden;
   }
   
