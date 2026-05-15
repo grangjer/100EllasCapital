@@ -20,11 +20,11 @@
           <!-- Desktop nav (unchanged) -->
           <nav>
             <ul>
-              <li><a href="about.html" class="nav-link">ABOUT</a></li>
-              <li><a href="impact.html" class="nav-link">IMPACT MAP</a></li>
+              <li><a href="about" class="nav-link">ABOUT</a></li>
+              <li><a href="impact" class="nav-link">IMPACT MAP</a></li>
               <li class="logo"><a href="index.html"><img src="10.png"></a></li>
-              <li><a href="insights.html" class="nav-link">INSIGHTS</a></li>
-              <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+              <li><a href="insights" class="nav-link">INSIGHTS</a></li>
+              <li><a href="contact" class="nav-link">CONTACT</a></li>
             </ul>
           </nav>
       
@@ -54,149 +54,157 @@
     
       <!-- ROADMAP -->
       <section class="roadmap-section">
+
+         <div class="hint-bar">
+          <h3>From your local community to global impact, I encourage you to think critically about where capital flows, who benefits, and what kind of future it helps build.</h3>
+          
+        </div>
     
-        <div class="hint-bar">
+        <div class="roadmap-wrapper">
+            <svg class="roadmap-svg" viewBox="0 0 1100 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="roadGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:var(--step-1)" />
+                        <stop offset="25%" style="stop-color:var(--step-2)" />
+                        <stop offset="50%" style="stop-color:var(--step-3)" />
+                        <stop offset="75%" style="stop-color:var(--step-4)" />
+                        <stop offset="100%" style="stop-color:var(--step-5)" />
+                    </linearGradient>
+                </defs>
+        
+                <path class="path-bg" d="M0,300 C150,300 150,150 300,200 C450,250 550,150 700,200 C850,250 850,300 1000,300" />
+                <path class="path-main" d="M0,300 C150,300 150,150 300,200 C450,250 550,150 700,200 C850,250 850,300 1000,300" />
+                <path class="path-dashed" d="M0,300 C150,300 150,150 300,200 C450,250 550,150 700,200 C850,250 850,300 1000,300" />
+        
+                <!-- Nodes -->
+                <g class="step-group" onclick="showCard(1, event)">
+                    <line class="connector-line" x1="150" y1="230" x2="150" y2="100" />
+                    <circle class="node-circle" cx="150" cy="100" r="25" fill="var(--step-1)" />
+                    <text class="node-text" x="150" y="100">1</text>
+                </g>
+                <g class="step-group" onclick="showCard(2, event)">
+                    <line class="connector-line" x1="325" y1="208" x2="325" y2="100" />
+                    <circle class="node-circle" cx="325" cy="100" r="25" fill="var(--step-2)" />
+                    <text class="node-text" x="325" y="100">2</text>
+                </g>
+                <g class="step-group" onclick="showCard(3, event)">
+                    <line class="connector-line" x1="500" y1="218" x2="500" y2="100" />
+                    <circle class="node-circle" cx="500" cy="100" r="25" fill="var(--step-3)" />
+                    <text class="node-text" x="500" y="100">3</text>
+                </g>
+                <g class="step-group" onclick="showCard(4, event)">
+                    <line class="connector-line" x1="675" y1="193" x2="675" y2="100" />
+                    <circle class="node-circle" cx="675" cy="100" r="25" fill="var(--step-4)" />
+                    <text class="node-text" x="675" y="100">4</text>
+                </g>
+                <g class="step-group" onclick="showCard(5, event)">
+                    <line class="connector-line" x1="850" y1="250" x2="850" y2="100" />
+                    <circle class="node-circle" cx="850" cy="100" r="25" fill="var(--step-5)" />
+                    <text class="node-text" x="850" y="100">5</text>
+                </g>
+
+           
+                <g class="label-group">
+                    <!-- Y=420 is higher up, making it more likely to stay inside your current box -->
+                    <text x="180" y="300" class="label-title" fill="var(--navy)">PROBLEM</text>
+                    <text x="180" y="320" class="label-sub">Understand the need</text>
+                  
+                    <text x="330" y="280" class="label-title" fill="var(--step-2)">SOLUTION</text>
+                    <text x="330" y="300" class="label-sub">Assess the fit</text>
+                  
+                    <text x="500" y="260" class="label-title" fill="var(--step-3)">STRATEGY</text>
+                    <text x="500" y="280" class="label-sub">Evaluate the plan</text>
+                  
+                    <text x="700" y="280" class="label-title" fill="var(--step-4)">DESIRED OUTCOME</text>
+                    <text x="700" y="300" class="label-sub">Define success</text>
+                  
+                    <text x="850" y="340" class="label-title" fill="var(--step-5)">EVALUATE RESULTS</text>
+                    <text x="850" y="360" class="label-sub">Check the evidence</text>
+                  </g>
+
+                  <!-- Background Illustrations -->
+<g class="illustrations" opacity="0.4">
+    <!-- Mountains (Left) -->
+    <path d="M-50,350 L50,200 L150,350 Z" fill="none" stroke="#d1d1d1" stroke-width="2" />
+    <path d="M20,350 L100,230 L180,350 Z" fill="none" stroke="#d1d1d1" stroke-width="2" /> 
+
+    </g>
+    
+<g class="illustrations">
+    <path d="M180,150 Q190,130 210,130 Q230,110 255,130 Q280,130 290,150" 
+          fill="none" 
+          stroke="#d1d1d1" 
+          stroke-width="2" 
+          stroke-linecap="round" />
+      <path d="M700,130 Q710,110 730,110 Q750,90 775,110 Q800,110 810,130" 
+          fill="none" 
+          stroke="#d1d1d1" 
+          stroke-width="2" 
+          stroke-linecap="round" />
+  </g>
+
+            </svg>
+
+          <div class="mobile-steps">
+  <div class="mobile-step" onclick="showCard(1, event)">
+    <div class="mobile-step-header" style="background:var(--step-1)">
+      <span class="mobile-num">1</span>
+      <span class="mobile-label">PROBLEM — Understand the need</span>
+    </div>
+  </div>
+  <div class="mobile-step" onclick="showCard(2, event)">
+    <div class="mobile-step-header" style="background:var(--step-2)">
+      <span class="mobile-num">2</span>
+      <span class="mobile-label">SOLUTION — Assess the fit</span>
+    </div>
+  </div>
+  <div class="mobile-step" onclick="showCard(3, event)">
+    <div class="mobile-step-header" style="background:var(--step-3)">
+      <span class="mobile-num">3</span>
+      <span class="mobile-label">STRATEGY — Evaluate the plan</span>
+    </div>
+  </div>
+  <div class="mobile-step" onclick="showCard(4, event)">
+    <div class="mobile-step-header" style="background:var(--step-4)">
+      <span class="mobile-num">4</span>
+      <span class="mobile-label">DESIRED OUTCOME — Define success</span>
+    </div>
+  </div>
+  <div class="mobile-step" onclick="showCard(5, event)">
+    <div class="mobile-step-header" style="background:var(--step-5)">
+      <span class="mobile-num">5</span>
+      <span class="mobile-label">EVALUATE RESULTS — Check the evidence</span>
+    </div>
+  </div>
+</div>
+
+            
+        
+            <div class="info-card" id="info-card">
+                <button class="close-btn" onclick="hideCard()">&times;</button>
+                <h3 id="card-title">TITLE</h3>
+                <div id="card-content"></div>
+            </div>
+        </div>
+
+         <div class="hint-bar">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8l-1-1a2 2 0 0 0-3 3l4 4a6 6 0 0 0 6 0 6 6 0 0 0 6-6v-2a2 2 0 0 0-4 0"/>
           </svg>
           Click each step on the roadmap to explore key questions and insights
         </div>
-    
-        <!-- SVG ROAD -->
-        <div class="road-wrap">
-          <svg viewBox="0 0 900 160" xmlns="http://www.w3.org/2000/svg">
-    
-            <!-- Road path -->
-            <path d="M20,100 C120,100 150,40 270,60 C390,80 400,120 510,95 C620,70 640,35 760,55 C820,65 870,80 900,80"
-                  fill="none" stroke="#ba8d4f" stroke-width="22" stroke-linecap="round" marker-end="url(#arrowhead)"/>
-            <!-- Dashed center line -->
-            <path d="M20,100 C120,100 150,40 270,60 C390,80 400,120 510,95 C620,70 640,35 760,55 C820,65 870,80 900,80"
-                  fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="10 12" opacity="0.55"/>
-    
-            <!-- Step 1: PROBLEM -->
-            <g class="step-node" id="node-0" onclick="toggleCard(0)">
-              <circle cx="100" cy="62" r="26" fill="#020c45" stroke="#f7eee8" stroke-width="2.5"/>
-              <text x="100" y="67" text-anchor="middle" fill="#fff" font-size="20" font-weight="700" font-family="Georgia,serif">1</text>
-              <text x="100" y="120" text-anchor="middle" fill="#020c45" font-size="18" font-weight="700" font-family="Georgia,serif" letter-spacing="1.5">PROBLEM</text>
-              <text x="100" y="140" text-anchor="middle" fill="#8a7060" font-size="16" font-family="Georgia,serif">Understand the need</text>
-            </g>
-    
-            <!-- Step 2: SOLUTION -->
-            <g class="step-node" id="node-1" onclick="toggleCard(1)">
-              <circle cx="300" cy="43" r="26" fill="#020c45" stroke="#f7eee8" stroke-width="2.5"/>
-              <text x="300" y="48" text-anchor="middle" fill="#fff" font-size="20" font-weight="700" font-family="Georgia,serif">2</text>
-              <text x="300" y="102" text-anchor="middle" fill="#020c45" font-size="18" font-weight="700" font-family="Georgia,serif" letter-spacing="1">SOLUTION</text>
-              <text x="300" y="120" text-anchor="middle" fill="#8a7060" font-size="16" font-family="Georgia,serif">Assess the fit</text>
-            </g>
-    
-            <!-- Step 3: STRATEGY -->
-            <g class="step-node" id="node-2" onclick="toggleCard(2)">
-              <circle cx="480" cy="78" r="26" fill="#020c45" stroke="#f7eee8" stroke-width="2.5"/>
-              <text x="480" y="83" text-anchor="middle" fill="#fff" font-size="20" font-weight="700" font-family="Georgia,serif">3</text>
-              <text x="480" y="20" text-anchor="middle" fill="#020c45" font-size="18" font-weight="700" font-family="Georgia,serif" letter-spacing="1">STRATEGY</text>
-              <text x="480" y="38" text-anchor="middle" fill="#8a7060" font-size="16" font-family="Georgia,serif">Evaluate the plan</text>
-            </g>
-    
-            <!-- Step 4: DESIRED OUTCOME -->
-            <g class="step-node" id="node-3" onclick="toggleCard(3)">
-              <circle cx="700" cy="42" r="26" fill="#020c45" stroke="#f7eee8" stroke-width="2.5"/>
-              <text x="700" y="47" text-anchor="middle" fill="#fff" font-size="20" font-weight="700" font-family="Georgia,serif">4</text>
-              <text x="700" y="100" text-anchor="middle" fill="#020c45" font-size="18" font-weight="700" font-family="Georgia,serif" letter-spacing="1">OUTCOME</text>
-              <text x="700" y="118" text-anchor="middle" fill="#8a7060" font-size="16" font-family="Georgia,serif">Define success</text>
-            </g>
-    
-            <!-- Step 5: EVALUATE RESULTS -->
-            <g class="step-node" id="node-4" onclick="toggleCard(4)">
-              <circle cx="878" cy="62" r="26" fill="#020c45" stroke="#f7eee8" stroke-width="2.5"/>
-              <text x="878" y="67" text-anchor="middle" fill="#fff" font-size="20" font-weight="700" font-family="Georgia,serif">5</text>
-              <text x="878" y="05" text-anchor="middle" fill="#020c45" font-size="18" font-weight="700" font-family="Georgia,serif" letter-spacing="1">RESULTS</text>
-              <text x="878" y="25" text-anchor="middle" fill="#8a7060" font-size="16" font-family="Georgia,serif">Check the evidence</text>
-            </g>
-          </svg>
-        </div>
-    
-        <!-- INFO CARDS -->
-        <div class="cards-grid" id="cards-grid">
-    
-          <div class="info-card" id="card-0">
-            <div class="card-header">
-              <div class="card-num" style="background:#020c45;">1</div>
-              <span class="card-title" style="color:#020c45;">Problem</span>
-            </div>
-            <ul class="card-questions">
-              <li>What is the real problem?</li>
-              <li>Who is most affected?</li>
-              <li>Why has it persisted?</li>
-            </ul>
-            <div class="card-insight" style="background:#eef0f8;">
-              Look for evidence, not assumptions. A real problem has data behind it.
-            </div>
-          </div>
-    
-          <div class="info-card" id="card-1">
-            <div class="card-header">
-              <div class="card-num" style="background:#020c45;">2</div>
-              <span class="card-title" style="color:#020c45;">Solution</span>
-            </div>
-            <ul class="card-questions">
-              <li>Does it address the root cause?</li>
-              <li>Who tried before — and why did they fail?</li>
-              <li>Could it cause unintended harm?</li>
-            </ul>
-            <div class="card-insight" style="background:#eef0f8;">
-              Good solutions are relevant, differentiated, and get more accessible as they scale — not less.
-            </div>
-          </div>
-    
-          <div class="info-card" id="card-2">
-            <div class="card-header">
-              <div class="card-num" style="background:#020c45;">3</div>
-              <span class="card-title" style="color:#020c45;">Strategy</span>
-            </div>
-            <ul class="card-questions">
-              <li>Is go-to-market reaching those who need it most?</li>
-              <li>Does the team have domain expertise to execute?</li>
-              <li>How will it sustain itself financially?</li>
-              <li>What are the key execution risks?</li>
-            </ul>
-            <div class="card-insight" style="background:#eef0f8;">
-              A great solution aimed at the wrong market is not investable.
-            </div>
-          </div>
-    
-          <div class="info-card" id="card-3">
-            <div class="card-header">
-              <div class="card-num" style="background:#020c45;">4</div>
-              <span class="card-title" style="color:#020c45;">Desired Outcome</span>
-            </div>
-            <ul class="card-questions">
-              <li>What change will this create?</li>
-              <li>Would this happen without this company?</li>
-              <li>What if the company is acquired?</li>
-            </ul>
-            <div class="card-insight" style="background:#eef0f8;">
-              Define impact before you invest — in the beneficiary's words, not the founder's.
-            </div>
-          </div>
-    
-          <div class="info-card" id="card-4">
-            <div class="card-header">
-              <div class="card-num" style="background:#020c45;">5</div>
-              <span class="card-title" style="color:#020c45;">Evaluate Results</span>
-            </div>
-            <ul class="card-questions">
-              <li>Is impact trajectory moving in the right direction?</li>
-              <li>Has the beneficiary population drifted?</li>
-              <li>What did this teach you for the next deal?</li>
-            </ul>
-            <div class="card-insight" style="background:#eef0f8;">
-              Track what matters. Learn. Adapt. Your portfolio is an evidence base, not just a ledger.
-            </div>
-          </div>
-    
-        </div>
-    
-      </section>
+
+    </section>
+
+    <!-- Important Note Section -->
+<section class="note-section">
+  <div class="container">
+    <div class="note-box">
+      <p class="eyebrow"><strong>One Important Note</strong></p>
+      <p class="note-text">Impact investing isn't just about avoiding certain companies or industries — it's about putting your money to work in solutions. Many people think "doing good" means not investing in harmful sectors, but that alone doesn't create change. Real impact comes from actively investing in businesses and ideas that improve the world — whether in climate, clean water, healthcare, regenerative agriculture, or women-led ventures. In simple terms, it's the difference between stepping away from a problem and helping fund the solution.</p>
+    </div>
+  </div>
+</section>
     
 
       <footer>
@@ -216,6 +224,7 @@
 
         <div class="copyright">
             <p>&copy; All Rights Reserved.</p>
+            <p class="signature">Developed by <a href="https://www.grangjer.github.io/portfolio">Isadora Morandi Cabrera</a> </p>
 
         </div>
     </footer>
